@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conbello Textile Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a202c; /* Dark theme background */
+            color: #e2e8f0; /* Light text color */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        .main-heading {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #63b3ed; /* Contrasting color for heading */
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        .sub-heading {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #90cdf4; /* Slightly lighter contrasting color */
+            margin-bottom: 2rem;
+        }
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+        .info-button {
+            background-color: #2d3748; /* Darker button background */
+            color: #e2e8f0; /* Light text */
+            padding: 1.25rem;
+            border-radius: 0.75rem;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%; /* Ensure consistent height */
+        }
+        .info-button:hover {
+            transform: translateY(-5px);
+            background-color: #4a5568; /* Lighter on hover */
+        }
+        .button-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: #a0aec0; /* Slightly muted title color */
+        }
+        .button-text {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #cbd5e0; /* Main text color */
+        }
+        .pie-chart-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 2.5rem;
+            width: 100%;
+            max-width: 500px; /* Limit pie chart size */
+        }
+        canvas {
+            background-color: #2d3748; /* Chart background */
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: block; /* Remove extra space below canvas */
+            width: 100%; /* Make canvas responsive */
+            height: auto; /* Maintain aspect ratio */
+        }
+        .footer {
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.875rem;
+            color: #718096; /* Muted footer text */
+            margin-top: auto; /* Push footer to the bottom */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .main-heading {
+                font-size: 2rem;
+            }
+            .sub-heading {
+                font-size: 1.25rem;
+            }
+            .content-grid {
+                grid-template-columns: 1fr; /* Stack buttons on small screens */
+            }
+            .info-button {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="main-heading">Conbello Textile: Elevating the quality of synthetic fabrics with natural fibers.</h1>
+            <p class="sub-heading">Advantages of very high quality fabrics obtained by blending synthetic fabrics such as polyester and polyamide (nylon) with natural fibres such as cotton and viscose.</p>
+        </header>
+
+        <section class="content-grid">
+            <div class="info-button" data-title="The Problem with Synthetics" data-content="The most commonly used fabrics in the production of fitness wear such as leggings, sports bras are undoubtedly Polyamide (Nylon) and Polyester fabrics. The most important problem of these synthetic fabrics is that they retain moisture and accumulate moisture on the outer surface of the fabric. Polyester and Polyamide fabrics have low breathability and cause the moisture in the skin to remain on the skin instead of being expelled. These properties create ideal conditions for moisture and heat accumulation and create a sticky and uncomfortable feeling. The inability to evaporate moisture quickly leads to an increase in body temperature. This causes moisture to be trapped on the surface of the body, causing discomfort even with minimal physical exertion.">
+                <h3 class="button-title">The Problem with Synthetics</h3>
+                <p class="button-text">Synthetics retain moisture, lack breathability, and cause discomfort due to heat accumulation.</p>
+            </div>
+
+            <div class="info-button" data-title="The Solution: Blending with Natural Fibres" data-content="By adding cotton fibres and/or viscose natural fibres obtained from beech wood to polyester and polyamide (nylon) fabrics, a much better quality fabric is obtained in every aspect. Unfortunately, polyester and polyamide fabrics contain a large amount of chemical poisons such as phthalates and especially BPA (Bisphenol A), which have been proven to be the causes of many diseases including allergies and cancer. The addition of natural fabric fibres to synthetic fabrics such as polyester and polyamide and polyester significantly reduces the concentration of these toxic chemicals.">
+                <h3 class="button-title">The Solution: Blending with Natural Fibres</h3>
+                <p class="button-text">Adding cotton or viscose significantly improves fabric quality and reduces toxic chemicals.</p>
+            </div>
+
+            <div class="info-button" data-title="High Technology & Cost" data-content="It is only possible to use Polyamide and Polyester, which are synthetic fabrics, and Cotton and Viscose, which are natural fabrics, as a blend in the same fabric only with high technology. Therefore, polyamide / polyester-cotton fabrics are more expensive than pure polyamide / polyester fabrics. In fitness clothing such as leggings and sports bras, synthetic fabric, which is easier to produce and therefore cheaper, is preferred instead of synthetic and natural fabric blends, which are called top class. This blend fabric, obtained by blending synthetic and natural fibres, aims to combine the beneficial properties of both materials to create a versatile, durable and much more comfortable wear for a variety of uses.">
+                <h3 class="button-title">High Technology & Cost</h3>
+                <p class="button-text">Blending requires high technology, making these fabrics more expensive but superior.</p>
+            </div>
+
+            <div class="info-button" data-title="Improved Comfort, Feel and Softness" data-content="Synthetic fibres can feel rough or rough on the skin. Blending them with cotton or viscose significantly improves softness and comfort. Superior ventilation-breathability makes it comfortable and cosy to wear in high humidity or low humidity, cold or hot weather.">
+                <h3 class="button-title">Improved Comfort, Feel and Softness</h3>
+                <p class="button-text">Blended fabrics offer superior softness, comfort, and ventilation-breathability.</p>
+            </div>
+
+            <div class="info-button" data-title="Unique Fabric Quality & Thermoregulation" data-content="Cotton or viscose fibres in the Polyamide and Polyester fabric help thermoregulation, preventing perspiration and allergies. The breathability of cotton, combined with the ability of nylon to provide insulation when needed, creates a fabric that adapts well to temperature changes.">
+                <h3 class="button-title">Unique Fabric Quality & Thermoregulation</h3>
+                <p class="button-text">Natural fibres aid thermoregulation, preventing perspiration and adapting to temperature changes.</p>
+            </div>
+
+            <div class="info-button" data-title="Enhanced Breathability" data-content="Natural fibres such as cotton and viscose are known for their breathability. While synthetics can trap heat and moisture, their blend provides better airflow, keeping the wearer cooler and drier.">
+                <h3 class="button-title">Enhanced Breathability</h3>
+                <p class="button-text">Blends offer better airflow, keeping the wearer cooler and drier than pure synthetics.</p>
+            </div>
+
+            <div class="info-button" data-title="Improved Durability and Performance" data-content="Strength and Resilience: Synthetics are generally stronger and more resistant to tearing, abrasion and wrinkling than natural fibres. This blend creates a fabric that holds its shape better and lasts longer.">
+                <h3 class="button-title">Improved Durability and Performance</h3>
+                <p class="button-text">The blend combines synthetic strength with natural comfort for lasting quality.</p>
+            </div>
+
+            <div class="info-button" data-title="Quick Drying" data-content="Synthetics dry much faster than natural fibres, making the blended fabric ideal for sportswear and apparel worn in humid climates. In other words, natural fibres mixed with synthetic fabrics such as polyester and polyamide have superior technical properties in terms of both comfort and health.">
+                <h3 class="button-title">Quick Drying</h3>
+                <p class="button-text">Blended fabrics dry faster, making them ideal for sportswear and humid climates.</p>
+            </div>
+
+            <div class="info-button" data-title="Water Resistance" data-content="Some synthetics such as nylon are naturally water resistant. This property is transferred to the blended fabric, making it highly suitable for outerwear and sportswear.">
+                <h3 class="button-title">Water Resistance</h3>
+                <p class="button-text">Blends inherit water resistance from synthetics like nylon, suitable for outerwear.</p>
+            </div>
+
+            <div class="info-button" data-title="Wide Range of Applications" data-content="The unique combination of properties allows for a wide range of applications, from casual everyday wear to high-performance athletic wear.">
+                <h3 class="button-title">Wide Range of Applications</h3>
+                <p class="button-text">The unique blend properties enable a wide range of applications from casual to athletic wear.</p>
+            </div>
+
+            <div class="info-button" data-title="Colour Fastness" data-content="Synthetic dyes tend to be more vibrant and less prone to fading than natural dyes. The blend retains colour vibrancy even after multiple washes.">
+                <h3 class="button-title">Colour Fastness</h3>
+                <p class="button-text">Blended fabrics retain vibrant colors even after multiple washes due to synthetic dyes.</p>
+            </div>
+
+            <div class="info-button" data-title="The Ultimate Result" data-content="Ultimately, blending synthetic and natural fibres allows the creation of high quality fabrics that combine the best of both worlds. The result is garments that are comfortable, durable, versatile and accessible to a wider range of consumers.">
+                <h3 class="button-title">The Ultimate Result</h3>
+                <p class="button-text">High-quality fabrics that are comfortable, durable, versatile, and accessible to all consumers.</p>
+            </div>
+        </section>
+
+        <div class="pie-chart-container">
+            <canvas id="benefitsPieChart"></canvas>
+        </div>
+
+        <div id="modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+            <div class="bg-gray-800 p-6 rounded-lg shadow-xl max-w-lg w-11/12 m-4 relative">
+                <h2 id="modal-title" class="text-xl font-bold text-blue-300 mb-4"></h2>
+                <p id="modal-content" class="text-gray-300 mb-6"></p>
+                <button id="close-modal" class="absolute top-3 right-3 text-gray-400 hover:text-gray-100 text-2xl">&times;</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Conbello Textile. All rights reserved.</p>
+    </footer>
+
+    <script>
+        window.onload = function() {
+            // Get all info buttons
+            const infoButtons = document.querySelectorAll('.info-button');
+            const modal = document.getElementById('modal');
+            const modalTitle = document.getElementById('modal-title');
+            const modalContent = document.getElementById('modal-content');
+            const closeModalButton = document.getElementById('close-modal');
+
+            // Add click event listener to each button
+            infoButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    modalTitle.textContent = button.dataset.title;
+                    modalContent.textContent = button.dataset.content;
+                    modal.classList.remove('hidden');
+                });
+            });
+
+            // Close modal when close button is clicked
+            closeModalButton.addEventListener('click', () => {
+                modal.classList.add('hidden');
+            });
+
+            // Close modal when clicking outside the modal content
+            modal.addEventListener('click', (event) => {
+                if (event.target === modal) {
+                    modal.classList.add('hidden');
+                }
+            });
+
+            // Pie Chart Data
+            const pieChartData = [
+                { label: 'Improved Comfort & Softness', value: 20, color: '#63b3ed' }, // Blue
+                { label: 'Unique Fabric Quality & Thermoregulation', value: 20, color: '#90cdf4' }, // Light Blue
+                { label: 'Enhanced Breathability', value: 15, color: '#a0aec0' }, // Grayish Blue
+                { label: 'Improved Durability & Performance', value: 15, color: '#fc8181' }, // Reddish
+                { label: 'Quick Drying & Water Resistance', value: 10, color: '#f6ad55' }, // Orange
+                { label: 'Wide Range of Applications & Color Fastness', value: 20, color: '#48bb78' }  // Green
+            ];
+
+            const canvas = document.getElementById('benefitsPieChart');
+            const ctx = canvas.getContext('2d');
+
+            // Set canvas dimensions dynamically
+            const setCanvasDimensions = () => {
+                const containerWidth = canvas.parentElement.clientWidth;
+                const size = Math.min(containerWidth, 500); // Max size 500px, responsive to container
+                canvas.width = size;
+                canvas.height = size;
+                drawPieChart();
+            };
+
+            // Draw Pie Chart Function
+            const drawPieChart = () => {
+                const centerX = canvas.width / 2;
+                const centerY = canvas.height / 2;
+                const radius = Math.min(centerX, centerY) * 0.8; // Adjust radius to fit within canvas
+
+                let totalValue = pieChartData.reduce((sum, item) => sum + item.value, 0);
+                let startAngle = 0;
+
+                ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas before redrawing
+
+                pieChartData.forEach(item => {
+                    let sliceAngle = (item.value / totalValue) * 2 * Math.PI;
+                    let endAngle = startAngle + sliceAngle;
+
+                    ctx.beginPath();
+                    ctx.moveTo(centerX, centerY);
+                    ctx.arc(centerX, centerY, radius, startAngle, endAngle);
+                    ctx.closePath();
+                    ctx.fillStyle = item.color;
+                    ctx.fill();
+
+                    // Draw text (label and percentage)
+                    let midAngle = startAngle + sliceAngle / 2;
+                    let textX = centerX + (radius * 0.7) * Math.cos(midAngle);
+                    let textY = centerY + (radius * 0.7) * Math.sin(midAngle);
+
+                    ctx.fillStyle = '#1a202c'; // Dark text color for labels
+                    ctx.font = 'bold 12px Inter';
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'middle';
+                    ctx.fillText(item.label, textX, textY - 10); // Label
+                    ctx.fillText(`${((item.value / totalValue) * 100).toFixed(1)}%`, textX, textY + 10); // Percentage
+
+                    startAngle = endAngle;
+                });
+
+                // Draw a circle in the middle for a "donut" effect
+                ctx.beginPath();
+                ctx.arc(centerX, centerY, radius * 0.4, 0, 2 * Math.PI); // Inner circle
+                ctx.fillStyle = '#2d3748'; // Same as chart background
+                ctx.fill();
+
+                // Draw text in the center of the donut
+                ctx.fillStyle = '#e2e8f0';
+                ctx.font = 'bold 16px Inter';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText('Benefits', centerX, centerY - 10);
+                ctx.fillText('of Blending', centerX, centerY + 10);
+            };
+
+            // Initial draw and redraw on resize
+            setCanvasDimensions();
+            window.addEventListener('resize', setCanvasDimensions);
+        };
+    </script>
+</body>
+</html>
